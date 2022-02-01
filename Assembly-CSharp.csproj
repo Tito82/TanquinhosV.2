@@ -36,23 +36,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Shell\ShellExplosion.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Tank\TankMovement.cs" />
-     <Compile Include="Assets\Scripts\UI\UIDirectionControl.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
      <Compile Include="Assets\Scripts\Tank\TankHealth.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\UI\UIDirectionControl.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankHealth.cs" />
-     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankMovement.cs" />
+     <Compile Include="Assets\Scripts\Shell\ShellExplosion.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Shell\ShellExplosion.cs" />
+     <Compile Include="Assets\Scripts\UI\UIDirectionControl.cs" />
+     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankHealth.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\UI\UIDirectionControl.cs" />
+     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
      <Compile Include="Assets\Scripts\Managers\TankManager.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Tank\TankShooting.cs" />
+     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankMovement.cs" />
+     <Compile Include="Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
      <None Include="Assets\Fonts\Bowlby_One\FontLicense.txt" />
      <None Include="Assets\Tanks!_Third-PartyNotice.txt" />
     <Reference Include="UnityEngine">
@@ -277,6 +278,9 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\PackageCache\com.unity.analytics@3.5.3\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -285,9 +289,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\PackageCache\com.unity.analytics@3.5.3\Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\PackageCache\com.unity.analytics@3.5.3\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -634,8 +635,20 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Purchasing.Common">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -643,14 +656,23 @@
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityStub">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -658,80 +680,59 @@
     <Reference Include="Unity.PlasticSCM.Editor">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.multiplayer-weaver.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\com.unity.multiplayer-weaver.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Purchasing.Common">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Purchasing.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityStub">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.Codeless">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Monetization">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.multiplayer-hlapi.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityCore">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
     <Reference Include="Analytics">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.SpatialTracking">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.multiplayer-weaver.Editor">
-        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\com.unity.multiplayer-weaver.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityCore">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Purchasing.Codeless">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Stores">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Purchasing">
         <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+        <HintPath>C:\Users\ferna\Documents\DAM2\Unity\Tanquinhos\Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
