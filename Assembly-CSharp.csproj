@@ -48,12 +48,13 @@
      <Compile Include="Assets\_Completed-Assets\Scripts\UI\UIDirectionControl.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Managers\TankManager.cs" />
+     <Compile Include="Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
      <Compile Include="Assets\Scripts\Managers\TankManager.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Camera\CameraControl.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Tank\TankShooting.cs" />
      <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankMovement.cs" />
-     <Compile Include="Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonManager.cs" />
      <None Include="Assets\Fonts\Bowlby_One\FontLicense.txt" />
      <None Include="Assets\Tanks!_Third-PartyNotice.txt" />
     <Reference Include="UnityEngine">
