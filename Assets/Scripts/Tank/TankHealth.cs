@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TankHealth : MonoBehaviour
 {
-    public float m_StartingHealth = 100f;                
+    public float m_StartingHealth = 100f;               
     public Slider m_Slider;                             
     public Image m_FillImage;                           
     public Color m_FullHealthColor = Color.green;       
@@ -13,7 +13,7 @@ public class TankHealth : MonoBehaviour
 
     private AudioSource m_ExplosionAudio;               
     private ParticleSystem m_ExplosionParticles;        
-    private float m_CurrentHealth;                      
+    public float m_CurrentHealth;                      
     private bool m_Dead;                                
 
 
@@ -29,9 +29,12 @@ public class TankHealth : MonoBehaviour
         m_ExplosionParticles.gameObject.SetActive (false);
     }
 
-
-    private void OnEnable()
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+/////////////////////////////////////////////////
+    public void OnEnable()
     {
+		Debug.Log ("recogiendo el on enable");
         // restablecemos salud y miramos si esta muerto o no
         m_CurrentHealth = m_StartingHealth;
         m_Dead = false;
@@ -40,6 +43,11 @@ public class TankHealth : MonoBehaviour
         SetHealthUI();
     }
 
+    public void HealthPowerUp(){
+        m_CurrentHealth = 100f;
+        SetHealthUI();
+        Debug.Log ("RECARGANDO VIDA");
+    }
 
     public void TakeDamage (float amount)
     {
@@ -57,7 +65,7 @@ public class TankHealth : MonoBehaviour
     }
 
 
-    private void SetHealthUI ()
+    public void SetHealthUI ()
     {
         // seteamos valor del slider
         m_Slider.value = m_CurrentHealth;
@@ -69,20 +77,20 @@ public class TankHealth : MonoBehaviour
 
     private void OnDeath ()
     {
-        // Set the flag so that this function is only called once.
+        // bandera para comprobar si muere
         m_Dead = true;
 
-        // Move the instantiated explosion prefab to the tank's position and turn it on.
+        // llamamos y colocamos en posicion la explosion
         m_ExplosionParticles.transform.position = transform.position;
         m_ExplosionParticles.gameObject.SetActive (true);
 
-        // Play the particle system of the tank exploding.
+        // mostramos animacion
         m_ExplosionParticles.Play ();
 
-        // Play the tank explosion sound effect.
+        // sonido de explosion
         m_ExplosionAudio.Play();
 
-        // Turn the tank off.
+        // desaparece el tanque
         gameObject.SetActive (false);
     }
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -64,29 +66,33 @@ public class GameManager : MonoBehaviour
         m_CameraControl.m_Targets = targets;
     }
 
+   public void LoadMenu(){
+      SceneManager.LoadScene("Menu3D");
+    }
+    
 
     // loop para seguir jugando
     private IEnumerator GameLoop ()
     {
-        // Start off by running the 'RoundStarting' coroutine but don't return until it's finished.
+        // ejecuta 'RoundStarting' hasta que haya terminado .
         yield return StartCoroutine (RoundStarting ());
 
-        // Once the 'RoundStarting' coroutine is finished, run the 'RoundPlaying' coroutine but don't return until it's finished.
+        // cuando termina'RoundStarting', ejecuta 'RoundPlaying'  hasta que haya finalice
         yield return StartCoroutine (RoundPlaying());
 
-        // Once execution has returned here, run the 'RoundEnding' coroutine, again don't return until it's finished.
+        // Al terminar roundplaying ejecuta round ending
         yield return StartCoroutine (RoundEnding());
 
-        // This code is not run until 'RoundEnding' has finished.  At which point, check if a game winner has been found.
+        // Al terminar round ending comprueba si hay ganador
         if (m_GameWinner != null)
         {
-            // If there is a game winner, restart the level.
-            Application.LoadLevel (Application.loadedLevel);
+            // si hay ganador recarga la aplicacion
+            //Application.LoadLevel (Application.loadedLevel);
+            LoadMenu();
         }
         else
         {
-            // If there isn't a winner yet, restart this coroutine so the loop continues.
-            // Note that this coroutine doesn't yield.  This means that the current version of the GameLoop will end.
+            //si no hay ganador vuelve al loop
             StartCoroutine (GameLoop ());
         }
     }
