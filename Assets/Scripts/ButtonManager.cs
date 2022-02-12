@@ -3,15 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public void CargarJuego(string nNombreScene){
+    public void LoadScene(string nNombreScene){
        SceneManager.LoadScene(nNombreScene);
     }
 
-    public void Salir(){
+    public void Exit(){
         
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
         Application.Quit();
     }
+
 }
