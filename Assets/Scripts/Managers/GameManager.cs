@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int m_NumRoundsToWin = 5;            // rondas para ganar
-    public float m_StartDelay = 3f;             // espara para jugar
+    public int m_NumRoundsToWin = 5;            // rondas para ganar.
+    public float m_StartDelay = 3f;             // espara para jugar.
     public float m_EndDelay = 3f;               // espera de final
     public CameraControl m_CameraControl;       // control de camara
     public Text m_MessageText;                  // Rtextos sobre pantalala
@@ -31,23 +31,26 @@ public class GameManager : MonoBehaviour
         SpawnAllTanks();
         SetCameraTargets();
 
-        // se crean los tanques y empieza la partida.
+        // se crean los tanques y empieza la partida..
         StartCoroutine (GameLoop ());
     }
 
+   
 
     private void SpawnAllTanks()
-    {
-        // se sapawnean los tanques
+    
+       {
+        // recorremos tanques 
         for (int i = 0; i < m_Tanks.Length; i++)
         {
-           
+            // los cremaos co su nuemro de jugador y los colocamos en los puntos de spawn
             m_Tanks[i].m_Instance =
                 Instantiate(m_TankPrefab, m_Tanks[i].m_SpawnPoint.position, m_Tanks[i].m_SpawnPoint.rotation) as GameObject;
             m_Tanks[i].m_PlayerNumber = i + 1;
             m_Tanks[i].Setup();
         }
     }
+
 
 
     private void SetCameraTargets()
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
    public void LoadMenu(){
       SceneManager.LoadScene("Menu3D");
     }
-    
+ 
 
     // loop para seguir jugando
     private IEnumerator GameLoop ()

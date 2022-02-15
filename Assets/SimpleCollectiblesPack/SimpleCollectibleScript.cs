@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,6 +17,9 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	public GameObject collectEffect;
 
+
+	
+
 	// Use this for initialization
 	void Start () {
 		
@@ -32,12 +35,15 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Player") {
-			Collect ();
+		if (other.tag == "Player") {///other es Jugador
+			int m_playerNumber = other.GetComponent<TankMovement>().m_PlayerNumber;
+			Debug.Log(m_playerNumber);
+			
+			Collect (m_playerNumber);
 		}
 	}
 
-	public void Collect()
+	public void Collect(int m_PlayerNumber)
 	{
 		if(collectSound)
 			AudioSource.PlayClipAtPoint(collectSound, transform.position);
@@ -45,6 +51,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 			Instantiate(collectEffect, transform.position, Quaternion.identity);
 
 		if (CollectibleType == CollectibleTypes.Type1) {
+			
 			
 			TankHealth tnk = FindObjectOfType(typeof(TankHealth)) as TankHealth;
 			tnk.HealthPowerUp();

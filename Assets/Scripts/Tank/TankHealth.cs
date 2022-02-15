@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TankHealth : MonoBehaviour
@@ -8,7 +8,8 @@ public class TankHealth : MonoBehaviour
     public Image m_FillImage;                           
     public Color m_FullHealthColor = Color.green;       
     public Color m_ZeroHealthColor = Color.red;         
-    public GameObject m_ExplosionPrefab;               
+    public GameObject m_ExplosionPrefab;  
+ 
 
 
     private AudioSource m_ExplosionAudio;               
@@ -34,7 +35,7 @@ public class TankHealth : MonoBehaviour
 /////////////////////////////////////////////////
     public void OnEnable()
     {
-		Debug.Log ("recogiendo el on enable");
+		
         // restablecemos salud y miramos si esta muerto o no
         m_CurrentHealth = m_StartingHealth;
         m_Dead = false;
@@ -44,9 +45,11 @@ public class TankHealth : MonoBehaviour
     }
 
     public void HealthPowerUp(){
+       
+        
         m_CurrentHealth = 100f;
         SetHealthUI();
-        Debug.Log ("RECARGANDO VIDA");
+        
     }
 
     public void TakeDamage (float amount)
