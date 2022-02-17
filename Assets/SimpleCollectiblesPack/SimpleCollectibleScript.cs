@@ -38,25 +38,33 @@ public class SimpleCollectibleScript : MonoBehaviour {
 		if (other.tag == "Player") {///other es Jugador
 			int m_playerNumber = other.GetComponent<TankMovement>().m_PlayerNumber;
 			Debug.Log(m_playerNumber);
-			
+			other.GetComponent<TankHealth>().HealthPowerUp();
+			// Debug.Log("get " + numberTank);
 			Collect (m_playerNumber);
+			Debug.Log(m_playerNumber);
 		}
 	}
 
 	public void Collect(int m_PlayerNumber)
+
 	{
-		if(collectSound)
+		
+		if(collectSound){
 			AudioSource.PlayClipAtPoint(collectSound, transform.position);
-		if(collectEffect)
+		}
+			
+		if(collectEffect){
 			Instantiate(collectEffect, transform.position, Quaternion.identity);
+		}
+			
 
 		if (CollectibleType == CollectibleTypes.Type1) {
 			
-			
+
 			TankHealth tnk = FindObjectOfType(typeof(TankHealth)) as TankHealth;
-			tnk.HealthPowerUp();
+			//tnk.HealthPowerUp();
 	
-			Debug.Log ("recogiendo el pickup");
+			
 		}
 		
 		Destroy (gameObject);

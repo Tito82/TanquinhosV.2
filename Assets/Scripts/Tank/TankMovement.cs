@@ -2,7 +2,7 @@
 
 public class TankMovement : MonoBehaviour
 {
-    public int m_PlayerNumber = 1;              
+    public int m_PlayerNumber;              
     public float m_Speed = 12f;                 
     public float m_TurnSpeed = 180f;          
     public AudioSource m_MovementAudio;         
@@ -120,5 +120,11 @@ public class TankMovement : MonoBehaviour
 
         // y aplicamos estos movimientos al rigdibody.
         m_Rigidbody.MoveRotation (m_Rigidbody.rotation * turnRotation);
+    }
+
+    public int GetPlayerNumber(){
+    
+        Debug.Log("-> " + m_PlayerNumber);
+        return m_PlayerNumber;
     }
 }
